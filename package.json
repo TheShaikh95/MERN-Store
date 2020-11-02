@@ -1,0 +1,22 @@
+{
+  "name": "mern-store",
+  "version": "1.0.0",
+  "description": "MERN eCommerce store",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheShaikh95/MERN-Store.git"
+  },
+  "author": "Afnan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TheShaikh95/MERN-Store/issues"
+  },
+  "homepage": "https://github.com/TheShaikh95/MERN-Store#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
