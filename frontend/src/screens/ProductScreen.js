@@ -19,7 +19,13 @@ const ProductScreen = ({match}) => {
             <Col md={3}>
             <ListGroup variant='flush'>
                 <ListGroup.Item>
-    <h2>{product.name}</h2>
+    <h3>{product.name}</h3>
+                </ListGroup.Item>
+                <ListGroup.Item>
+                    <Rating 
+                    value={product.rating} 
+                    text={`${product.numReviews} reviews`} 
+                    />
                 </ListGroup.Item>
             </ListGroup>
             </Col>
