@@ -1,3 +1,4 @@
+import axios from 'axios'
 import React, { useState, useEffect } from 'react'
 import { Row, Col } from 'react-bootstrap'
 import Product from '../components/Product'
@@ -13,7 +14,8 @@ const HomeScreen = () => {
         }
 
         fetchProducts()
-    })
+    }, [])
+
     return (
         <>
         <h1>Latest products</h1>
