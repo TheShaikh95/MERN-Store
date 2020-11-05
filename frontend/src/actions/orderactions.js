@@ -261,4 +261,4 @@ export const deliverOrder = (order) => async (dispatch, getState) => {
         payload: message,
       })
     }
-  
+  }
