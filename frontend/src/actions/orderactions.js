@@ -21,3 +21,20 @@ import {
   ORDER_DELIVER_REQUEST,
 } from '../constants/orderConstants'
 import { logout } from './userActions'
+
+export const createOrder = (order) => async (dispatch, getState) => {
+    try {
+      dispatch({
+        type: ORDER_CREATE_REQUEST,
+      })
+  
+      const {
+        userLogin: { userInfo },
+      } = getState()
+  
+      const config = {
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${userInfo.token}`,
+        },
+      }
