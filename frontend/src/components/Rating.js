@@ -72,4 +72,4 @@ Rating.defaultProps = {
   color: '#f8e825',
 }
 
-export default Ratin
+export default Rating
