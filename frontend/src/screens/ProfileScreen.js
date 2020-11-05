@@ -28,3 +28,18 @@ const ProfileScreen = ({ location, history }) => {
 
   const orderListMy = useSelector((state) => state.orderListMy)
   const { loading: loadingOrders, error: errorOrders, orders } = orderListMy
+
+  useEffect(() => {
+    if (!userInfo) {
+      history.push('/login')
+    } else {
+      if (!user || !user.name || success) {
+        dispatch({ type: USER_UPDATE_PROFILE_RESET })
+        dispatch(getUserDetails('profile'))
+        dispatch(listMyOrders())
+      } else {
+        setName(user.name)
+        setEmail(user.email)
+      }
+    }
+  }, [dispatch, history, userInfo, user, success])
