@@ -244,4 +244,4 @@ export const createProduct = () => async (dispatch, getState) => {
             : error.message,
       })
     }
-  
+  }
